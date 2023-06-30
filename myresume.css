@@ -9,22 +9,65 @@ body {
   position: absolute;
 }
 
-.profile-contact {
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(22, 34, 126, 0.5);
+  border-radius: 50%;
+  margin-left: 43%;
+  overflow: hidden;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  inset: -5px 70px;
+  background: linear-gradient(315deg, #00ccff, #d400d4);
+  transition: 0.5s;
+  animation: animate 4s linear infinite;
+}
+
+.box:hover::before {
+  inset: -20px 0px;
+}
+
+@keyframes animate
+
+{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.picture {
+  position: absolute;
+  object-fit: cover;
+  border: solid rgb(36, 52, 102);
+  width: 180px;
+  height: 180px;
+  border-radius: 90px;
+}
+
+.profile-content {
   display: grid;
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-.picture {
-  object-fit: cover;
-  border-style: solid;
-  border-color: rgb(54, 148, 160);
-  width: 150px;
-  height: 150px;
-  border-radius: 90px;
-  margin-top: 20px;
-  margin-left: 50px;
 }
 
 .name {
@@ -32,7 +75,7 @@ body {
   color:  rgb(96, 214, 214);
   font-size: 30px;
   margin-top: 5px;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .email-container {
@@ -85,35 +128,9 @@ body {
   margin-left: 5px;
 }
 
-.about-me-container {
-  display: grid;
-  justify-content: center;
-  position: fixed;
-  background-color: white;
-  border-radius: 10px;
-  margin-top: 90px;
-  margin-left: 70px;
-  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
-  padding-left: 8px;
-}
-
-.about-me {
-  font-family: Arial;
-  font-size: 30px;
-  color: rgb(96, 214, 214);
-  font-weight: bold;
-}
-
-.about-me-content {
-  font-family: Arial;
-  width: 600px;
-  color: black;
-  font-size: 17px;
-}
-
 nav {
   left: 400px;
-  bottom: 290px;
+  bottom: 50px;
   width: 30vw;
   min-width: 300px;
   display: grid;
@@ -192,14 +209,58 @@ nav {
   width: 69%;
 }
 
+.about-me-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 20px;
+  width: 23%;
+  height: 400px;
+  background-color: rgb(2, 4, 24);
+  margin-left: 10%;
+  margin-top: 10%;
+  overflow: hidden;
+}
 
+.about-me-content {
+  position: absolute;
+  font-family: Arial;
+  width: 303px;
+  height: 395px;
+  border-radius: 15px;
+  color: rgb(241, 232, 232);
+  background-color: rgb(48, 118, 139);
+  font-size: 17px;
+}
 
+.about-me-box::before {
+  content: '';
+  width: 35%;
+  height: 150%;
+  inset: -5px 60px;
+  background: linear-gradient(315deg, #00ccff, #d400d4);
+  transition: 0.5s;
+  animation: animate 4s linear infinite;
+}
 
+.about-me-box:hover::before {
+  inset: -20px 0px;
+}
 
+@keyframes animate
 
+{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-
-
-
-
-
+.about-me-box::after {
+  content: '';
+  inset: 4px;
+  z-index: 1;
+}
