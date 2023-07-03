@@ -4,139 +4,18 @@ body {
 
 .bg-image {
   object-fit: cover;
-  width: 100%;
+  width: 110%;
   height: 400px;
   position: absolute;
 }
 
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background-color: rgba(22, 34, 126, 0.5);
-  border-radius: 50%;
-  margin-left: 43%;
-  overflow: hidden;
-}
-
-.box::before {
-  content: '';
-  position: absolute;
-  inset: -5px 70px;
-  background: linear-gradient(315deg, #00ccff, #d400d4);
-  transition: 0.5s;
-  animation: animate 4s linear infinite;
-}
-
-.box:hover::before {
-  inset: -20px 0px;
-}
-
-@keyframes animate
-
-{
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.box::after {
-  content: '';
-  position: absolute;
-  inset: 6px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.picture {
-  position: absolute;
-  object-fit: cover;
-  border: solid rgb(36, 52, 102);
-  width: 180px;
-  height: 180px;
-  border-radius: 90px;
-}
-
-.profile-content {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.name {
-  font-family: Arial;
-  color:  rgb(96, 214, 214);
-  font-size: 30px;
-  margin-top: 5px;
-  margin-left: 20px;
-}
-
-.email-container {
-  display: flex;
-  align-items: center;
-  width: 230px;
-}
-
-.email-container:hover {
-  background-color: rgba(108, 185, 185, 0.5);
-}
-
-.email,
-.github {
-  font-family: Arial;
-  text-decoration: none;
-  color: white;
-  font-size: 15px;
-  margin-left: 5px;
-}
- 
-.github-container {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  width: 120px;
-}
-
-.github-container:hover {
-  background-color: rgba(108, 185, 185, 0.5);
-}
-
-.phone-container {
-  display: flex;
-  align-items: center;
-  width: 130px;
-  cursor: pointer;
-  margin-left: 2px;
-}
-
-.phone-container:hover {
-  background-color: rgba(108, 185, 185, 0.5);
-}
-
-.phone-number {
-  font-family: Arial;
-  color: white;
-  font-size: 15px;
-  margin-top: 10px;
-  margin-left: 5px;
-}
-
 nav {
-  left: 400px;
-  bottom: 50px;
   width: 30vw;
   min-width: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   position: relative;
-  margin: auto;
+  margin-left: 65%;
 }
 
 .home,
@@ -150,6 +29,7 @@ nav {
   font-size: 20px;
   letter-spacing: 0.5px;
   padding: 0 8px;
+  margin-top: 10px;
 }
 
 .home:after {
@@ -209,18 +89,143 @@ nav {
   width: 69%;
 }
 
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(22, 34, 126, 0.5);
+  border-radius: 50%;
+  margin-left: 43%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  inset: -5px 70px;
+  background: linear-gradient(315deg, #00ccff, #d400d4);
+  transition: 0.5s;
+  animation: animate 4s linear infinite;
+}
+
+.box:hover::before {
+  inset: -20px 0px;
+}
+
+@keyframes animate
+
+{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.picture {
+  position: absolute;
+  object-fit: cover;
+  border: solid rgb(36, 52, 102);
+  width: 180px;
+  height: 180px;
+  border-radius: 90px;
+}
+
+.profile-content {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 7px;
+}
+
+.name {
+  font-family: Arial;
+  color:  rgb(96, 214, 214);
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.email-container {
+  display: flex;
+  align-items: center;
+  width: 210px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.email-container:hover {
+  background-color: rgba(40, 204, 204, 0.5);
+}
+
+.email,
+.github {
+  font-family: Arial;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  margin-left: 5px;
+}
+ 
+.github-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: 110px;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.github-container:hover {
+  background-color:  rgba(40, 204, 204, 0.5);
+}
+
+.phone-container {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  cursor: pointer;
+  margin-left: 8px;
+  border-radius: 5px;
+}
+
+.phone-container:hover {
+  background-color: rgba(40, 204, 204, 0.5);
+}
+
+.phone-number {
+  font-family: Arial;
+  color: white;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
 .about-me-box {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   border-radius: 20px;
-  width: 23%;
+  width: 22%;
   height: 400px;
   background-color: rgb(2, 4, 24);
   margin-left: 10%;
-  margin-top: 10%;
   overflow: hidden;
+  margin-top: 5%;
 }
 
 .about-me-content {
@@ -263,4 +268,44 @@ nav {
   content: '';
   inset: 4px;
   z-index: 1;
+}
+
+
+@media screen and (max-width: 400px) {
+  .bg-image {
+    width: 110%;
+    height: 60%;
+  }
+  nav {
+    font-size: 15px;
+    padding: 10px 45px;
+    margin-left: -1px;
+    background-color: rgb(30, 87, 161, 0.56);
+    
+  }
+  .contact {
+    margin-left: 15px;
+  }
+  .box {
+    width: 200px;
+    height: 200px;
+    margin-left: 26%;
+    margin-top: 10%;
+  } 
+  .profile-content {
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   margin-top: 10%;
+ }
+ .about-me-box {
+   border-radius: 20px;
+   width: 83%;
+   height: 400px;
+   background-color: rgb(2, 4, 24);
+   margin-left: 10%;
+   overflow: hidden;
+   margin-top: 30%;
+ }
 }
